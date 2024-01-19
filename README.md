@@ -17,6 +17,7 @@ Danny wants to use the data to answer a few simple questions about his customers
 ## Questions and Solutions
 
 1. What is the total amount each customer spent at the restaurant?
+<img align="left" width="600" src="https://github.com/amitgajkal/Restaurant-case-study---SQL/blob/main/Resource/ERD.png" alt="amitgajkal" />
 
 
 
