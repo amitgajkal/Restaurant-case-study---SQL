@@ -111,11 +111,12 @@ Solution:
 
 <img align="Center" width="400" src="https://github.com/amitgajkal/Restaurant-case-study---SQL/blob/main/Resource/Solution%207.png" alt="amitgajkal" />
 
+
 **8. What is the total items and amount spent for each member before they became a member?**
 
 **Steps:**
 - Select the columns sales.customer_id and calculate the count of sales.product_id as items for each customer and the sum of menu.price as spent.
-- From dannys_diner.sales table, join dannys_diner.members table on customer_id column, ensuring that sales.order_date is earlier than members. Then, join dannys_diner.menu table to dannys_diner.sales table on product_id columnjoin_date (sales.order_date < members.join_date).
+- From dannys_diner.sales table, join dannys_diner.members table on customer_id column, ensuring that sales.order_date is earlier than members. Then, join dannys_diner.menu table to dannys_diner.sales table on product_id columnjoin_date (sales.order_date < members.join_date)
 - Group the results by sales.customer_id.
 - Order the result by sales.customer_id in ascending order.
 
@@ -124,3 +125,15 @@ Solution:
 Solution:
 
 <img align="Center" width="400" src="https://github.com/amitgajkal/Restaurant-case-study---SQL/blob/main/Resource/Solution%208.png" alt="amitgajkal" />
+
+
+**9. If each $1 spent equates to 10 points and sushi has a 2x points multiplier — how many points would each customer have?**
+
+**Steps:**
+
+Let's break down the question to understand the point calculation for each customer's purchases.
+
+- Each $1 spent = 10 points. However, product_id 1 sushi gets 2x points, so each $1 spent = 20 points.- Here's how the calculation is performed using a conditional CASE statement:
+  - If product_id = 1, multiply every $1 by 20 points.
+  - Otherwise, multiply $1 by 10 points.
+- Then, calculate the total points for each customer.
