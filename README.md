@@ -120,7 +120,7 @@ Solution:
 - Group the results by sales.customer_id.
 - Order the result by sales.customer_id in ascending order.
 
-<img align="Center" width="600" src="https://github.com/amitgajkal/Restaurant-case-study---SQL/blob/main/Resource/Question%208.png" alt="amitgajkal" />
+<img align="Center" width="800" src="https://github.com/amitgajkal/Restaurant-case-study---SQL/blob/main/Resource/Question%208.png" alt="amitgajkal" />
 
 Solution:
 
@@ -138,7 +138,7 @@ Let's break down the question to understand the point calculation for each custo
   - Otherwise, multiply $1 by 10 points.
 - Then, calculate the total points for each customer.
 
-<img align="Center" width="600" src="https://github.com/amitgajkal/Restaurant-case-study---SQL/blob/main/Resource/Question%209.png" alt="amitgajkal" />
+<img align="Center" width="800" src="https://github.com/amitgajkal/Restaurant-case-study---SQL/blob/main/Resource/Question%209.png" alt="amitgajkal" />
 
 Solution:
 
