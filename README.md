@@ -137,3 +137,9 @@ Let's break down the question to understand the point calculation for each custo
   - If product_id = 1, multiply every $1 by 20 points.
   - Otherwise, multiply $1 by 10 points.
 - Then, calculate the total points for each customer.
+
+<img align="Center" width="600" src="https://github.com/amitgajkal/Restaurant-case-study---SQL/blob/main/Resource/Question%209.png" alt="amitgajkal" />
+
+Solution:
+
+<img align="Center" width="400" src="https://github.com/amitgajkal/Restaurant-case-study---SQL/blob/main/Resource/Solution%209.png" alt="amitgajkal" />
