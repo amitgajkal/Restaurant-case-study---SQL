@@ -58,7 +58,7 @@ Solution:
 **4. What is the most purchased item on the menu and how many times was it purchased by all customers?**
 
 **Steps:**
-- Perform a COUNT aggregation on the product_id column and ORDER BY the result in descending order using most_purchased field.
+- Perform a COUNT aggregation on the product_id column and ORDER BY the result in descending order using purchased_vol field.
 - Apply the LIMIT 1 clause to filter and retrieve the highest number of purchased items.
 
 <img align="Center" width="600" src="https://github.com/amitgajkal/Restaurant-case-study---SQL/blob/main/Resource/Question%204.png" alt="amitgajkal" />
@@ -66,3 +66,12 @@ Solution:
 Solution:
 
 <img align="Center" width="250" src="https://github.com/amitgajkal/Restaurant-case-study---SQL/blob/main/Resource/Solution%204.png" alt="amitgajkal" />
+
+
+**5. Which item was the most popular for each customer?**
+
+**Steps:**
+- Create a CTE named cte1 and within the CTE, join the menu table and sales table using the product_id column
+- Group results by customer_id and product_name and calculate the count of product_id occurrences for each group
+- Utilize the DENSE_RANK() window function to calculate the ranking of each sales.customer_id partition based on the count of orders COUNT(sales.customer_id) in descending order
+- In the outer query, select the appropriate columns and apply a filter in the WHERE clause to retrieve only the rows where the rank column equals 1, representing the rows with the highest order count for each customer
