@@ -43,8 +43,14 @@ Solution:
 <img align="Center" width="250" src="https://github.com/amitgajkal/Restaurant-case-study---SQL/blob/main/Resource/Solution%202.png" alt="amitgajkal" />
 
 **3. What was the first item from the menu purchased by each customer?**
+
 **Steps:**
 - Create a Common Table Expression (CTE) named cte1. Within the CTE, create a new column rnk and calculate the row number using DENSE_RANK() window function.The PARTITION BY clause divides the data by customer_id, and the ORDER BY clause orders the rows within each partition by order_date.
-- In the outer query, select the appropriate columns and apply a filter in the WHERE clause to retrieve only the rows where the rank column equals 1, which represents the first row within each customer_id partition.
-- Use the GROUP BY clause to group the result by customer_id and product_name.
+- In the outer query, appropriate columns are selected and a filter is applied in the WHERE clause to retrieve the only rows where the rank column equals 1, which represents the first row within each customer_id partition.
+- Used the GROUP BY clause to group the result by customer_id and product_name.
 
+<img align="Center" width="600" src="https://github.com/amitgajkal/Restaurant-case-study---SQL/blob/main/Resource/Question%203.png" alt="amitgajkal" />
+
+Solution:
+
+<img align="Center" width="250" src="https://github.com/amitgajkal/Restaurant-case-study---SQL/blob/main/Resource/Solution%203.png" alt="amitgajkal" />
