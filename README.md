@@ -102,9 +102,7 @@ Solution:
 - Create a CTE
 - In the CTE, select the appropriate columns and calculate the rank using the ROW_NUMBER() window function. The rank is determined based on the order dates of the sales in descending order within each customer's group.
 - Join dannys_diner.members table with dannys_diner.sales table based on the customer_id column and also join Menu table using product_id column. Only including sales that occurred before the customer joined as a member (join_date > order_date).
-- 
 - Filter the result set to include only the rows where the rank is 1, representing the earliest purchase made by each customer before they became a member.
-Sort the result by customer_id in ascending order.
 
 
 <img align="Center" width="600" src="https://github.com/amitgajkal/Restaurant-case-study---SQL/blob/main/Resource/new%20Question%207.png" alt="amitgajkal" />
@@ -112,3 +110,17 @@ Sort the result by customer_id in ascending order.
 Solution:
 
 <img align="Center" width="400" src="https://github.com/amitgajkal/Restaurant-case-study---SQL/blob/main/Resource/Solution%207.png" alt="amitgajkal" />
+
+**8. What is the total items and amount spent for each member before they became a member?**
+
+**Steps:**
+- Select the columns sales.customer_id and calculate the count of sales.product_id as items for each customer and the sum of menu.price as spent.
+- From dannys_diner.sales table, join dannys_diner.members table on customer_id column, ensuring that sales.order_date is earlier than members. Then, join dannys_diner.menu table to dannys_diner.sales table on product_id columnjoin_date (sales.order_date < members.join_date).
+- Group the results by sales.customer_id.
+- Order the result by sales.customer_id in ascending order.
+
+<img align="Center" width="600" src="https://github.com/amitgajkal/Restaurant-case-study---SQL/blob/main/Resource/Question%208.png" alt="amitgajkal" />
+
+Solution:
+
+<img align="Center" width="400" src="https://github.com/amitgajkal/Restaurant-case-study---SQL/blob/main/Resource/Solution%208.png" alt="amitgajkal" />
