@@ -101,8 +101,8 @@ Solution:
 **Steps:**
 - Create a CTE
 - In the CTE, select the appropriate columns and calculate the rank using the ROW_NUMBER() window function. The rank is determined based on the order dates of the sales in descending order within each customer's group.
-- Join dannys_diner.members table with dannys_diner.sales table based on the customer_id column, only including sales that occurred before the customer joined as a member (sales.order_date < members.join_date).
-- Join purchased_prior_member CTE with dannys_diner.menu table based on product_id column.
+- Join dannys_diner.members table with dannys_diner.sales table based on the customer_id column and also join Menu table using product_id column. Only including sales that occurred before the customer joined as a member (join_date > order_date).
+- 
 - Filter the result set to include only the rows where the rank is 1, representing the earliest purchase made by each customer before they became a member.
 Sort the result by customer_id in ascending order.
 
