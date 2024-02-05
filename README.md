@@ -86,11 +86,9 @@ Solution:
 **6. Which item was purchased first by the customer after they became a member?**
 
 Steps:
-- Create a CTE named cte1 and within the CTE, select the appropriate columns and calculate the row number using the dense_rank() window function. The PARTITION BY clause divides the data by sales.customer_id and the ORDER BY clause orders the rows within each members.customer_id partition by sales.order_date.
-- Join tables dannys_diner.members and dannys_diner.sales on customer_id column. Additionally, apply a condition to only include sales that occurred after the member's join_date (sales.order_date > members.join_date).
-- In the outer query, join the joined_as_member CTE with the dannys_diner.menu on the product_id column.
-- In the WHERE clause, filter to retrieve only the rows where the row_num column equals 1, representing the first row within each customer_id partition.
-- Order result by customer_id in ascending order.
+- Create a CTE named cte1 and within the CTE, select the appropriate columns and calculate the row number using the dense_rank() window function. The PARTITION BY clause divides the data by sales.customer_id and the ORDER BY clause orders the rows within each members.customer_id partition by order_date
+- Join tables members and menu on product_id column. Additionally, apply a condition to only include sales that occurred on or after the member's join_date (order_date >= join_date)
+- In the WHERE clause, filter to retrieve only the rows where the drnk column equals 1, representing the first row within each customer_id partition
 
 <img align="Center" width="600" src="https://github.com/amitgajkal/Restaurant-case-study---SQL/blob/main/Resource/Question%205.png" alt="amitgajkal" />
 
