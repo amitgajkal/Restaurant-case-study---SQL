@@ -54,3 +54,15 @@ Solution:
 Solution:
 
 <img align="Center" width="250" src="https://github.com/amitgajkal/Restaurant-case-study---SQL/blob/main/Resource/Solution%203.png" alt="amitgajkal" />
+
+**4. What is the most purchased item on the menu and how many times was it purchased by all customers?**
+
+**Steps:**
+- Perform a COUNT aggregation on the product_id column and ORDER BY the result in descending order using most_purchased field.
+- Apply the LIMIT 1 clause to filter and retrieve the highest number of purchased items.
+
+<img align="Center" width="600" src="https://github.com/amitgajkal/Restaurant-case-study---SQL/blob/main/Resource/Question%204.png" alt="amitgajkal" />
+
+Solution:
+
+<img align="Center" width="250" src="https://github.com/amitgajkal/Restaurant-case-study---SQL/blob/main/Resource/Solution%204.png" alt="amitgajkal" />
